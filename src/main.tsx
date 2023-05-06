@@ -8,9 +8,12 @@ import "@/assets/styles/global.scss"
 // 需要用到按需引入  所以用到插件 vite-plugin-style-import
 // import 'antd/dist/reset.css';
 import App from './App.tsx'
+import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <App />
+      <BrowserRouter>
+          <App />
+      </BrowserRouter>
   </React.StrictMode>,
 )

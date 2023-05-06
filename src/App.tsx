@@ -1,16 +1,17 @@
-
-import Comp1 from "./components/Comp1"
-import Comp2 from "./components/Comp2"
-import { Button } from 'antd';
+import { useRoutes,Link } from "react-router-dom"
+import router from "@/router";
 function App() {
+    const routerView = useRoutes(router)
   return (
-    <>
-      <div className="app">app组件
-          <Button type="primary">我得按钮</Button>
-      <Comp1></Comp1>
-      <Comp2></Comp2>
+
+      <div className="App">
+          <Link to="/home">Home</Link> |
+          <Link to="/about">About</Link> |
+          <Link to="/user">User</Link>
+      {/* 占位符 */}
+          {routerView}
       </div>
-    </>
+
   )
 }
 
